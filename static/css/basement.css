@@ -1,0 +1,51 @@
+
+.basement {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    top: 100%;
+
+    /* с днем иксбокса #009900*/
+    background: #009900;
+    box-shadow: 0px 0px 75px -10px #009900;
+}
+
+.mediaBottomBar{
+    display: flex;
+    position: center;
+    justify-content: center;
+    /*margin-top: 10px;*/
+    /*margin-left: 10px;*/
+
+}
+
+.mediaBottomBar li{
+    display: inline;
+    margin: 50px 25px 50px 25px;
+}
+
+#text-bottom-one{
+    /*position: absolute; Абсолютная позиция, то есть позиция на экране, НЕ на сайте*/
+    /*width: 419px; Ширина рамки текста*/
+    /*height: 46px;*/
+    /*left: 120px;*/
+    /*bottom: 10px;*/
+
+    position: center;
+    width: 800px;
+
+
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 23px;
+    letter-spacing: 0.03em;
+    color: #000000;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
