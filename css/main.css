@@ -1,0 +1,215 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    /*overflow-x: hidden;*/
+    min-width: 900px;
+    /* width: 1920px; */
+    background-color: #F7F7F7;
+}
+
+header{
+    position: relative;
+    top: 0px;
+    /*position: absolute;*/
+    width: 100%;
+    height: 133px;
+
+
+    /* с днем иксбокса #66FF00*/
+    background: #FFFFFF;
+    box-shadow: 0px 4px 102px -17px rgba(0, 0, 0, 0.13);
+}
+
+#logoSurgu{
+    position: absolute;
+    width: 111px;
+    height: 110px;
+    left: 100px;
+    top: 11px;
+}
+
+#text-header-one{
+    position: absolute;
+    width: 405px;
+    height: 34px;
+    left: 120px;
+    top: 20px;
+
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.03em;
+    color: #232323;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+#text-header-two{
+    position: absolute;
+    width: 419px;
+    height: 46px;
+    left: 120px;
+    bottom: 10px;
+
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 23px;
+    letter-spacing: 0.03em;
+    color: #0074BE;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+.mediaBar{
+    position: absolute;
+    display:block;
+    right: 100px;
+    top: 50px;
+    /*margin-top: 50%;*/
+    /*margin-left: 80%;*/
+
+}
+
+.mediaBar li{
+    display: inline;
+    margin: 5px;
+    /*padding: 5px;*/
+}
+
+.main {
+    height: 640px;
+    border: 3px dashed #ff746f;
+}
+
+.main__container {
+    margin-top: 84px;
+}
+
+.main__bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 32px;
+    position: absolute;
+
+    /* font-size: 800px; */
+    font-size: 40vw;
+    font-weight: 700;
+    /* line-height: 95.9%; */
+
+    width: 100%;
+    height: 70%;
+
+    color: rgba(212, 235, 240, 0.47);
+
+    z-index: -5;
+}
+
+.main__logo {
+    /* padding-top: 128px; */
+    text-align: center;
+}
+
+.main__logo__text__top {
+    font-size: 48px;
+    font-weight: 500;
+    
+    letter-spacing: 0.095em;
+    line-height: 95.9%;
+
+    color: #7B93A7;
+    
+}
+
+.main__logo__text__main {
+    margin-top: -48px;
+
+    font-size: 224px;
+    font-weight: 900;
+    line-height: 280px;
+
+    background-image: url("../images/logoMain.jpg");
+    background-position: center;
+    background-size: 800px;
+    /*background-size: cover;*/
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.main__logo__text__bottom {
+    margin-top: -8px;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 39px;
+}
+
+.main__buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 36px;
+    margin-top: 48px;
+    
+}
+
+.btn {
+    width: 350px; 
+    height: 84px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    background: linear-gradient(92.48deg, #50AFFF -2.13%, #0094FF 100%);
+    box-shadow: 0px 0px 31px rgba(0, 133, 255, 0.81);
+    color: white;
+
+    display: flex; 
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 95.9%;
+
+    border-radius: 36px;
+    border: none;
+    height: 64px;
+
+    text-decoration: none;
+    box-sizing: border-box; 
+    /* padding: 32px; */
+}
+
+.btn.secondary {
+    background: #AFDBFF;
+    border: 3px solid #79C6FF;
+    box-shadow: none;
+}
+
+.btn:hover {
+    background: white;
+    color: #0074BE;
+    font-weight: 600;
+}
+
+
+
+
