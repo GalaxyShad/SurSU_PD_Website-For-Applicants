@@ -230,6 +230,10 @@ header{
     margin-bottom: 16px;
 }
 
+.ege__text > p {
+    text-align: center;
+}
+
 .ege__filters {
     margin-top: 48px;
     width: 100%;
