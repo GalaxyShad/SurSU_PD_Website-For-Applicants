@@ -213,7 +213,7 @@ header{
 /* Калькулятор ЕГЭ */
 .ege__container {
     color: white;
-    height: 600px;
+    /* height: 600px; */
     background: #44ABFF;
 
     padding: 32px 100px;
