@@ -13,8 +13,7 @@ body{
 
 header{
     position: relative;
-    /*position: sticky;*/
-    top: 0px;
+    top: 0;
     width: 100%;
     height: 133px;
 
@@ -409,8 +408,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 /* Основной контент */
 .courses__container {
-    height: 1024px;
-    
+    height: auto;
 }
 
 .courses__panel {
@@ -437,7 +435,7 @@ input[type=number]::-webkit-inner-spin-button {
     font-size: 18px;
 
     color: #747474;
-    /* background-color: yellow; */
+     /*background-color: yellow;*/
 
     padding-bottom: 16px;
 
@@ -455,31 +453,34 @@ input[type=number]::-webkit-inner-spin-button {
 
 
 .courses__main {
-    background-color: #EFEFEF;
+    display: flex;
+    /*background-color: #676767;*/
 }
 
 
 .side__menu__container{
-    width: 588px;
-    height: auto;
+    width: 500px;
+    height: min-content;
+
+    align-items: center;
+    justify-content: center;
 
     background: #FFFFFF;
     box-shadow: 0 4px 56px rgba(0, 0, 0, 0.05);
     border-radius: 37px;
-    margin-top: 59px;
-    margin-left: 81px;
+    margin: 50px;
 }
 
 .side__menu__directions{
     display: flex;
     flex-flow: column;
-    justify-content: left;
+    /*justify-content: center;*/
 
-    row-gap: 0px;
+    /*row-gap: 0px;*/
     padding: 44px 0 44px 0;
 }
 
-.directions{
+.direction{
     display: block;
     align-items: center;
     justify-content: center;
@@ -488,19 +489,75 @@ input[type=number]::-webkit-inner-spin-button {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 16px;
+    color: #004B89;
 
     padding: 44px;
     /*background: #00FF00;*/
 
 }
 
-.directions:hover{
+.direction:hover{
     color: #44ABFF;
+    border-top: 4px solid #44ABFF;
     border-bottom: 4px solid #44ABFF;
+
+    border-radius: 30px;
 }
 
-.directions.activated{
+.direction.activated{
     color: #FFFFFF;
     background: #44ABFF;
 }
+
+.visit__card__container{
+    width: auto;
+    height: min-content;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #FFFFFF;
+    box-shadow: 0 4px 56px rgba(0, 0, 0, 0.05);
+    border-radius: 37px;
+    padding: 44px;
+    margin: 50px;
+
+}
+
+.card > h1{
+    font-size: 48px;
+}
+
+.description__direction{
+    display: flex;
+    border-bottom: 1px solid #000000;
+}
+
+.info__direction{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 50px;
+}
+
+.text__info__direction{
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0px;
+}
+
+.text__info__direction > h1{
+    font-size: 24px;
+    padding: 10px;
+}
+.text__info__direction > h2{
+    font-size: 48px;
+    padding: 10px;
+}
+.text__info__direction > p{
+    padding: 10px;
+ }
