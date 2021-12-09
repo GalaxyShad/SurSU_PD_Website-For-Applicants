@@ -1,5 +1,4 @@
 
-const tabs = document.getElementsByClassName('institute');
 
 
 const courses = [
@@ -10,6 +9,8 @@ const courses = [
     {name: "Математика", institute: "Пи"},
     {name: "Физика", institute: "Пи"},
 ];
+
+const tabs = document.getElementsByClassName('institute');
 
 for (let i = 0; i < tabs.length; i++) {
     tabs[i].addEventListener("click", () => {

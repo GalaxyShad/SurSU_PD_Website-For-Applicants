@@ -1,4 +1,4 @@
-header{
+header {
     position: relative;
     top: 0;
     width: 100%;
@@ -74,4 +74,34 @@ header{
     display: inline;
     margin: 5px;
     /*padding: 5px;*/
+}
+
+@media screen and (max-width: 640px) {
+    .mediaBar{
+        display: none;
+    }
+
+    #text-header-one{
+        display: none;
+    }
+    
+    #text-header-two{
+        display: none;
+    }
+
+    #logoSurgu{
+        position: relative;
+        width: 111px;
+        height: 110px;
+
+        left: 0;
+        top: 0; 
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
 }

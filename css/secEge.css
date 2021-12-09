@@ -197,3 +197,9 @@ input[type=number]::-webkit-inner-spin-button {
     box-shadow: none;
     color:  #ffffff;
 }
+
+@media screen and (max-width: 640px) {
+    .s__ege {
+        display: none;
+    }
+}
