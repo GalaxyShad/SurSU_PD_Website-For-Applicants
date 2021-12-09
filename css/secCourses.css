@@ -28,9 +28,10 @@
 
     font-weight: 500;
     font-size: 18px;
-
-    color: #747474;
-     /*background-color: yellow;*/
+    
+    color: #44ABFF; 
+    filter: brightness(0) opacity(50%);
+    border-color: transparent;
 
     padding-bottom: 16px;
 
@@ -39,11 +40,50 @@
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+
+    user-select: none;
 }
 
 .institute:hover {
-    color: #44ABFF;
-    border-bottom: 4px solid #44ABFF;
+    filter: none;
+    cursor: pointer;
+    border-bottom: 4px solid ;
+}
+
+.institute.activated {
+    filter: none;
+    border-bottom: 4px solid ;
+} 
+
+
+.pi {
+    color: rgb(230, 60, 36);
+    border-color: rgb(230, 60, 36);
+}
+
+.med {
+    color: rgb(8, 150, 67);
+    border-color: rgb(8, 150, 67);
+}
+
+.econom {
+    color: rgb(141, 113, 0);
+    border-color: rgb(141, 113, 0);
+}
+
+.est {
+    color: rgb(237, 115, 29);
+    border-color: rgb(237, 115, 29);
+}
+
+.gum {
+    color: rgb(86, 64, 112);
+    border-color: rgb(86, 64, 112);
+}
+
+.pravo {
+    color: rgb(0, 115, 187);
+    border-color: rgb(0, 115, 187);
 }
 
 
@@ -52,7 +92,6 @@
     justify-content: center;
 
     margin: 32px 100px;
-    /*background-color: #676767;*/
 }
 
 
@@ -70,9 +109,7 @@
     border-radius: 37px;
 }
 
-.side__menu__directions{
-    /* width: 550px; */
-    
+.side__menu__directions{  
     display: flex;
     flex-flow: column;
 
@@ -92,10 +129,7 @@
     font-size: 18px;
     color: #004B89;
 
-
     padding: 14px 40px;
-    /*background: #00FF00;*/
-
 }
 
 .direction:hover{
@@ -132,7 +166,7 @@
 .description__direction{
     display: flex;
     flex-direction: row;
-    /* background-color: #0A726A; */
+
     padding-bottom: 32px;
     border-bottom: 2px solid #b3b3b3;
 }
@@ -143,13 +177,11 @@
     font-weight: 400;
     padding-right: 64px;
     line-height: 31px;
-    /* font-kerning: 32px; */
 }
 
 
 .direction__photo {
     width: 40%; 
-    /* height: 100%; */
     height: auto;
     border-radius: 8px; 
 
