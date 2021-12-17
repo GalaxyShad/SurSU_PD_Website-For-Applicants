@@ -52,7 +52,49 @@
 
 
 @media screen and (max-width: 640px) {
-    footer {
-        display: none;
+    .mediaBottomBar {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 32px;
+    }
+
+    .mediaBottomBar li{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 2% 0px;
+    }
+
+    .mediaIco {
+        margin: 0 auto;
+        /* width: 40%; */
+    }
+
+    .mediaBottomBar a:hover{
+        background: none;
+        border-radius: none;
+    }
+
+    .basement {
+        height: auto;
+    }
+
+    .text-bottom-one{
+        /* padding: 0 256px; */
+    
+        position: relative;
+        bottom: auto; 
+    
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+
+        font-size: 4vw;
+
+
+        padding: 20% 0;
+    
     }
 }

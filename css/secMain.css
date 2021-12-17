@@ -1,4 +1,5 @@
 .main {
+    /* display: none; */
     height: 640px;
 }
 
@@ -72,6 +73,12 @@
 }
 
 @media screen and (max-width: 640px) {
+    .main {
+        /* display: none; */
+        height: auto;
+        margin-bottom: 64px;
+    }
+
     .main__bg {
         display: none;
     }
@@ -82,21 +89,28 @@
         flex-direction: column;
         gap: 16px;
         margin-top: 64px;
+        
     }
 
     .main__logo__text__top {
-        font-size: 38px;
+        /* font-size: 21px; */
+        font-size: 5.3vw;
+        /* background-size: 80px; */
     }
     
     .main__logo__text__main {
-        font-size: 180px;
-        margin-top: -64px;
+        font-size: 25vw;
+        /* font-size: 100px; */
+        line-height:normal;
+        /* line-height: 120px; */
+        margin-top: -12px; 
     }
     
     .main__logo__text__bottom {
-        margin-top: -32px;
+        /* margin-top: 8px; */
+        margin-top: -2px; 
         font-weight: 300;
-        font-size: 24px;
+        font-size: 5vw;
         line-height: 39px;
     }
 }

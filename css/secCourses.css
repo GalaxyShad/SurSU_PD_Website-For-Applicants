@@ -97,6 +97,8 @@
 
 /* ---- Меню ---- */
 .side__menu__container{
+    /* display: none; */
+
     height: min-content;
     width: 120%;
     min-width: 250px;
@@ -245,7 +247,135 @@
 }
 
 @media screen and (max-width: 640px) {
-    .s__courses {
-        display: none;
+    .courses__panel {
+        width: 100%;
+        overflow-x: scroll;
+
+        padding: 2% 40%;
+        
+        flex-direction: row;  
+        flex-flow: unset;
+        justify-content: left;
+
+        gap: 100%;
     }
+
+    
+
+    .institute {
+        font-size: 5vw;
+    
+        height: auto;
+    }
+
+    /* Карточки */
+    .courses__main {
+        flex-direction: column;
+    
+        margin: 5% 2%;
+    }
+
+    .side__menu__container{
+        /* display: none; */
+    
+        height: min-content;
+        width: 100%;
+        min-width: unset;
+
+        margin-bottom: 5%;
+    
+        align-items: center;
+        justify-content: center;
+    }
+
+    .direction {
+        text-align: center;
+
+        font-size: 4vw;
+
+        padding: 6% 40px;
+    }
+
+    .visit__card__container{
+        align-items: center;
+        justify-content: center;
+    
+        background: #FFF;
+        box-shadow: 0 4px 56px rgba(0, 0, 0, 0.05);
+        border-radius: 37px;
+    
+        padding: 0% 5% 5% 5%;
+        margin: 0 1%; 
+    
+    }
+    
+    .card > h1{
+        font-size: 8vw;
+        margin-top: 4%;
+        margin-bottom: 4%;
+        text-align: center;
+    }
+    
+    
+    .description__direction > p{
+        font-size: 4vw;
+        font-weight: 400;
+        padding-right: 0;
+        line-height: 5vw;
+    }
+    
+    
+    /* .direction__photo {
+        width: 40%; 
+        height: auto;
+        border-radius: 8px; 
+    
+        object-fit: cover;
+    } */
+    
+    
+    .info__direction{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+    
+        margin-top: 16px;
+    }
+    
+    .text__info__direction{
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+    }
+    
+    .text__info__direction > h1{
+        font-size: 5vw;
+        padding: 10px;
+        height: auto;
+
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .text__info__direction > h2{
+        font-size: 12vw;
+        height: auto;
+        line-height: 50px;
+        margin: 5% 0;
+    }
+
+    .text__info__direction > p{
+        font-size: 4vw;
+        padding: 2px 0px;
+     }
 }
