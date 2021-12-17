@@ -72,7 +72,7 @@
     
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 840px) {
     .main {
         /* display: none; */
         height: auto;

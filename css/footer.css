@@ -53,21 +53,23 @@
 
 @media screen and (max-width: 640px) {
     .mediaBottomBar {
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
-        padding-top: 32px;
+        padding-top: 64px;
+        gap: 20px;
     }
 
     .mediaBottomBar li{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         margin: 2% 0px;
     }
 
     .mediaIco {
         margin: 0 auto;
+        width: 16vw;
         /* width: 40%; */
     }
 

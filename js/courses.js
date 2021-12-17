@@ -47,4 +47,42 @@ function menuUpdate(courses) {
     }
 }
 
+function cardUpdate(card) {
+    const nHeader = document.querySelector("#card_header");
+    const nDescription = document.querySelector("#card_description");
+    const nPoints = document.querySelector("#card_points");
+    const nSubjects = document.querySelector("#card_subjects");
+    const nPlaceCount = document.querySelector("#card_place");
+    const nMoneyType = document.querySelector("#card_money_type");
+    const nPeriod = document.querySelector("#card_period");
+    const nCost = document.querySelector("#card_cost");
+
+    nHeader.innerHTML = card.title;
+    nDescription.innerHTML = card.desc;
+    nPoints.innerHTML = card.points;
+    nSubjects.innerHTML = "";
+    for (let i = 0; i < card.subjects.length; i++) {
+        const node = document.createElement("p");
+        node.innerHTML = card.subjects[i];
+        nSubjects.appendChild(node);
+    }
+    nPlaceCount.innerHTML = card.placeCount;
+    nMoneyType.innerHTML = card.moneyType;
+    nPeriod.innerHTML = card.period;
+    nCost.innerHTML = card.cost;
+}
+
+cardRender( 
+    {
+        title: "Программная инженерия",
+        desc: "Вы будете учить физику :).",
+        points: 100.98,
+        subjects: ["Просто Физика", "Продвинутая Физика", "Классная Физика"],
+        placeCount: "20/5",
+        moneyType: "Бюджет / Комерция",
+        period: "4 года",
+        cost: "99999 999 в год" 
+    }
+);
+
 menuUpdate(courses);
