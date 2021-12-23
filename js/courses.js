@@ -1,26 +1,4 @@
 
-/*Калькулятор ЕГЭ*/
-const tabs_ege = document.getElementsByClassName('ege__filter');
-
-for (let i = 0; i < tabs_ege.length; i++) {
-    tabs_ege[i].addEventListener("click", () => {
-        let qua_exam=0;
-        for (let i = 0; i < tabs_ege.length; i++)
-            if (tabs_ege[i].classList.contains("activated"))
-                qua_exam++;
-        if (tabs_ege[i].classList.contains("activated") ) {
-            tabs_ege[i].classList.remove("activated");
-            qua_exam--;
-        } else {
-            if (qua_exam < 3) {
-                tabs_ege[i].classList.add("activated");
-                qua_exam++;
-            }
-        }
-    });
-}
-
-
 const courses = [
     {name: "Нука Врач", institute: "Мед"},
     {name: "Геймдев", institute: "Пи"},

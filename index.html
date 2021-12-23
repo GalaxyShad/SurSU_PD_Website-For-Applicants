@@ -26,7 +26,7 @@
         <div class="wrapper">
             <header class="s__header">
                 <div class="container">
-                    <div id="logoSurgu"> 
+                    <div id="logoSurgu">
                         <img src="images/logoSurgu.svg">
                         <div id="text-header-one">Бюджетное учреждение высшего образования Ханты-Мансийского автономного оркуга - Югры</div>
                         <div id="text-header-two"> Сургутский Государственный университет</div>
@@ -75,19 +75,22 @@
                             и мы подберем подходящие вам напрвления подготовки.</p>
                     </div>
                     <div class="ege__filters">
-                        <div class="ege__filter" id="fmath">Математика</div>
-                        <div class="ege__filter activated" id="fit">Информатика</div>
-                        <div class="ege__filter" id="frus">Русский язык</div>
-                        <div class="ege__filter activated" id="finyaz">Иностранный язык</div>
+                        <div class="ege__filter activated" id="fmath">Математика</div>
+                        <div class="ege__filter" id="fit">Информатика</div>
+                        <div class="ege__filter activated" id="frus">Русский язык</div>
+                        <div class="ege__filter" id="finyaz">Иностранный язык</div>
                         <div class="ege__filter" id="fhistory">История</div>
-                        <div class="ege__filter activated" id="fobshestvo">Обществознание</div>
+                        <div class="ege__filter" id="fobshestvo">Обществознание</div>
                         <div class="ege__filter" id="fphys">Физика</div>
                         <div class="ege__filter" id="fgeo">География</div>
                         <div class="ege__filter" id="fbio">Биология</div>
                         <div class="ege__filter" id="fchem">Химия</div>
                     </div>
                     <div class="ege__input">
-                        <input id="ege__input" type="number" value="0" min="0" max="300">
+                        <input id="ege__input" type="number" value="0" min="0" max="300"
+                               onkeyup="ege__input__js();"
+                               onclick="ege__input__js();"
+                        >
                         <button class="btn ege" id="ege__btn">Смотреть направления</button>
                     </div>
                 </div>
@@ -186,10 +189,10 @@
                     </div>
                 </div>
             </footer>
-
-            
         </div>
-        <!-- JS -->
-        <script src="js/courses.js" type="text/javascript" ></script>
+
+            <!-- JS -->
+            <script src="js/courses.js" type="text/javascript" ></script>
+            <script src="js/Ege.js" type="text/javascript" ></script>
     </body>
 </html>
