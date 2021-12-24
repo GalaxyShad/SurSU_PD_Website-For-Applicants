@@ -109,13 +109,12 @@ def get_institute(institution_id):
 
 
 @site.route('/get-specialties', methods=['GET'])
-# ?ege=&subjects=math&subjects=it
 def get_cse():
-    average_score = request.args.get('average_score')
-    subjects = request.args.get('')
+    average_score = request.args.get('ege')
+    subjects = request.args.get('subjects')
     if type(subjects) is str:
         subjects = [subjects]
-    assert all(x in ascii_letters for x in subjects)
+    assert all(letter in ascii_letters for x in subjects for letter in x)
     assert is_float(average_score)
     cur = get_mysql_cursor()
     if 'math' in subjects:
@@ -123,46 +122,41 @@ def get_cse():
             SELECT naming, institute
             FROM specialties
             WHERE
-                average_score = "{average_score}"
-                AND subjects LIKE "%{subjects_translations[subjects[0]]}%"
-                AND subjects LIKE "%{subjects_translations[subjects[1]]}%"
+                average_score >= "{average_score}"
+                AND necessary_subjects LIKE "%{subjects_translations[subjects[0]]}%"
+                AND necessary_subjects LIKE "%{subjects_translations[subjects[1]]}%"
         ''')
     else:
         cur.execute(f'''
             SELECT naming, institute 
             FROM specialties 
             WHERE 
-                average_score = "{average_score}" 
-                AND subjects LIKE "%{subjects_translations[subjects[0]]}%"
+                average_score >= "{average_score}" 
+                AND necessary_subjects LIKE "%{subjects_translations[subjects[0]]}%"
         ''')
-
     your_mama = cur.fetchall()
     cur.close()
     return json.dumps(your_mama)
 
 
-# @site.route('/institute/<string:speciality_id>/', methods=['GET'])
-# def get_institute(karto4ka):
-#     assert all(x in '0123456789' for x in speciality_id)
-#     cur = get_mysql_cursor()
-#     cur.execute(f'SELECT naming, institute FROM specialties WHERE id = "{speciality_id}"')
-#     your_mama = cur.fetchone()
-#     cur.close()
-#     return json.dumps(your_mama)
+@site.route('/institute/<string:institution_id>/<string:speciality_id>', methods=['GET'])
+def get_speciality(institution_id, speciality_id):
+    assert all(x in '0123456789' for x in speciality_id)
+    cur = get_mysql_cursor()
+    cur.execute(f'''
+        SELECT 
+            naming, description, average_score, necessary_subjects, 
+            members_bachelor, degree, period_of_study 
+        FROM specialties 
+        WHERE 
+            id = "{speciality_id}"
+            AND institution_id  = "{institution_id}"
+    ''')
+    your_mama = cur.fetchone()
+    cur.close()
+    return json.dumps(your_mama)
+# ['naming', 'description', 'average_score', 'necessary_subjects', 'members_bachelor', 'degree', 'period_of_study']
+# {'naming': 'Информатика и вычислительная техника', 'description': 'Каждая частичка информации в мире скопирована. В бэкап. Кроме человеческого разума..
 
 if __name__ == "__main__":
     site.run(debug=True)
-
-
-# jaga_jaga(
-#     {
-#         "title": "Программная инженерия",
-#         "desc": "Вы будете учить физику :).",
-#         "points": 100.98,
-#         "subjects": ["Просто Физика", "Продвинутая Физика", "Классная Физика"],
-#         "placeCount": "20/5",
-#         "moneyType": "Бюджет / Коммерция",
-#         "period": "4 года",
-#         "cost": "99999 999 в год"
-#     }
-# )
