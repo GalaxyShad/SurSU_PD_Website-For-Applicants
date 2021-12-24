@@ -3,7 +3,7 @@ import json
 from string import ascii_letters
 
 import pymysql
-from flask import render_template, Flask
+from flask import render_template, Flask, request
 from pymysql.cursors import DictCursor
 
 host = 'localhost'
@@ -109,7 +109,10 @@ def get_institute(institution_id):
 
 
 @site.route('/get-specialties', methods=['GET'])
-def get_cse(average_score, subjects):
+# ?ege=&subjects=math&subjects=it
+def get_cse():
+    average_score = request.args.get('average_score')
+    subjects = request.args.get('')
     if type(subjects) is str:
         subjects = [subjects]
     assert all(x in ascii_letters for x in subjects)
