@@ -146,7 +146,7 @@ def get_speciality(institution_id, speciality_id):
     cur.execute(f'''
         SELECT 
             naming, description, average_score, necessary_subjects, 
-            members_bachelor, degree, period_of_study 
+            members_bachelor, members_commerce, degree, period_of_study 
         FROM specialties 
         WHERE 
             id = "{speciality_id}"
