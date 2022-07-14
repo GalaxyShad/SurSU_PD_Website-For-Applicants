@@ -8,7 +8,7 @@ from pymysql.cursors import DictCursor
 
 host = 'localhost'
 user = 'root'
-password = 'nastyadoska01'
+password = '123'
 db = 'cse_calculator'
 
 
@@ -16,7 +16,8 @@ site = Flask(__name__)
 
 
 def fetch_one_wrapper(method):
-    """Monkey patch функции cursor.fetchone()
+    """
+    Monkey patch функции cursor.fetchone()
     Заменяет все decimal.Decimal на int
     """
     def wrapper(*args, **kwargs):
@@ -33,7 +34,8 @@ def fetch_one_wrapper(method):
 
 
 def fetch_all_wrapper(method):
-    """Monkey patch функции cursor.fetchall()
+    """
+    Monkey patch функции cursor.fetchall()
     Заменяет все decimal.Decimal на int
     """
     def wrapper(*args, **kwargs):
@@ -93,9 +95,9 @@ def index():
 def all_institutes():
     cur = get_mysql_cursor()
     cur.execute('SELECT naming, institute FROM specialties')
-    your_mama = cur.fetchall()
+    m = cur.fetchall()
     cur.close()
-    return json.dumps(your_mama)
+    return json.dumps(m)
 
 
 @site.route('/institute/<string:institution_id>', methods=['GET'])
@@ -103,9 +105,9 @@ def get_institute(institution_id):
     assert all(x in ascii_letters for x in institution_id)
     cur = get_mysql_cursor()
     cur.execute(f'SELECT naming, institute FROM specialties WHERE institution_id  = "{institution_id}"')
-    your_mama = cur.fetchall()
+    m = cur.fetchall()
     cur.close()
-    return json.dumps(your_mama)
+    return json.dumps(m)
 
 
 @site.route('/get-specialties', methods=['GET'])
@@ -134,9 +136,9 @@ def get_cse():
                 average_score >= "{average_score}" 
                 AND necessary_subjects LIKE "%{subjects_translations[subjects[0]]}%"
         ''')
-    your_mama = cur.fetchall()
+    m = cur.fetchall()
     cur.close()
-    return json.dumps(your_mama)
+    return json.dumps(m)
 
 
 @site.route('/institute/<string:institution_id>/<string:speciality_id>', methods=['GET'])
@@ -152,9 +154,10 @@ def get_speciality(institution_id, speciality_id):
             id = "{speciality_id}"
             AND institution_id  = "{institution_id}"
     ''')
-    your_mama = cur.fetchone()
+    m = cur.fetchone()
     cur.close()
-    return json.dumps(your_mama)
+    return json.dumps(m)
+
 # ['naming', 'description', 'average_score', 'necessary_subjects', 'members_bachelor', 'degree', 'period_of_study']
 # {'naming': 'Информатика и вычислительная техника', 'description': 'Каждая частичка информации в мире скопирована. В бэкап. Кроме человеческого разума..
 
