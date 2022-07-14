@@ -1,5 +1,5 @@
 
-/*Калькулятор ЕГЭ*/
+/* Калькулятор ЕГЭ */
 const tabs_ege = document.getElementsByClassName('ege__filter');
 
 for (let i = 0; i < tabs_ege.length; i++) {

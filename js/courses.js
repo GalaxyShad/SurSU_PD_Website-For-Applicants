@@ -1,6 +1,6 @@
 
 const courses = [
-    {name: "Нука Врач", institute: "Мед"},
+    {name: "Лечебное дело", institute: "Мед"},
     {name: "Геймдев", institute: "Пи"},
     {name: "ПИ", institute: "Пи"},
     {name: "ИСИТ", institute: "Пи"},
@@ -70,17 +70,17 @@ function cardUpdate(card) {
     nCost.innerHTML = card.cost;
 }
 
-cardRender( 
-    {
-        title: "Программная инженерия",
-        desc: "Вы будете учить физику :).",
-        points: 100.98,
-        subjects: ["Просто Физика", "Продвинутая Физика", "Классная Физика"],
-        placeCount: "20/5",
-        moneyType: "Бюджет / Комерция",
-        period: "4 года",
-        cost: "99999 999 в год" 
-    }
-);
+// cardUpdate( 
+//     {
+//         title: "Программная инженерия",
+//         desc: " ",
+//         points: 100.98,
+//         subjects: [subj1, "subj2, subj3],
+//         placeCount: "20/5",
+//         moneyType: "Бюджет / Комерция",
+//         period: "4 года",
+//         cost: "197 000 в год" 
+//     }
+// );
 
 menuUpdate(courses);
