@@ -1,11 +1,11 @@
-/* Основной контент */
+/* РћСЃРЅРѕРІРЅРѕР№ РєРѕРЅС‚РµРЅС‚ */
 
 .courses__container {
     height: auto;
     margin-bottom: 256px;
 }
 
-/* ---- Вкладки ---- */
+/* ---- Р’РєР»Р°РґРєРё ---- */
 .courses__panel {
     display: flex;
     flex-flow: row wrap; 
@@ -95,7 +95,7 @@
 }
 
 
-/* ---- Меню ---- */
+/* ---- РњРµРЅСЋ ---- */
 .side__menu__container{
     /* display: none; */
 
@@ -145,7 +145,7 @@
 }
 
 
-/* ---- Карточки ---- */
+/* ---- РљР°СЂС‚РѕС‡РєРё ---- */
 .visit__card__container{
     align-items: center;
     justify-content: center;
@@ -277,7 +277,7 @@
         height: auto;
     }
 
-    /* Карточки */
+    /* РљР°СЂС‚РѕС‡РєРё */
     .courses__main {
         flex-direction: column;
     
@@ -332,15 +332,6 @@
         padding-right: 0;
         line-height: 5vw;
     }
-    
-    
-    /* .direction__photo {
-        width: 40%; 
-        height: auto;
-        border-radius: 8px; 
-    
-        object-fit: cover;
-    } */
     
     
     .info__direction{

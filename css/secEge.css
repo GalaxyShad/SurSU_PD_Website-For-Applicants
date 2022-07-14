@@ -1,7 +1,6 @@
-/* Êàëüêóëÿòîğ ÅÃİ */
+/* ĞšĞ°Ğ»ÑŒĞºÑƒĞ»ÑÑ‚Ğ¾Ñ€ Ğ•Ğ“Ğ­ */
 .ege__container {
     color: white;
-    /* height: 600px; */
     background: #44ABFF;
 
     padding: 32px 100px;
@@ -176,7 +175,6 @@ input[type=number]::-webkit-inner-spin-button {
     text-align: center;
     letter-spacing: 0.055em;
 
-    /* width: 332px; */
     width: 400px;
     height: 100px;
 
@@ -186,14 +184,14 @@ input[type=number]::-webkit-inner-spin-button {
 .btn.ege {
     width: 500px;
     background: #ffffff;
-    /* border: 3px solid #79C6FF; */
+
     box-shadow: none;
     color:  #44ABFF;
 }
 
 .btn.ege:hover {
     background: #4fcaff;
-    /* border: 3px solid #79C6FF; */
+
     box-shadow: none;
     color:  #ffffff;
 }
@@ -217,9 +215,6 @@ input[type=number]::-webkit-inner-spin-button {
     .ege__text > h1 {
         overflow-wrap: normal;
         font-size: 8vw;
-        /* font-weight: 900;
-        text-align: center;
-        margin-bottom: 16px; */
     }
 
     .ege__input > input {
@@ -230,6 +225,5 @@ input[type=number]::-webkit-inner-spin-button {
         letter-spacing: 0.055em;
 
         width: 90%;
-        /* height: 100px; */
     }
 }
