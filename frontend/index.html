@@ -1,0 +1,198 @@
+
+<!doctype html>
+    <html lang="en">
+    <head>
+        <!--meta http-equiv="refresh" content="1"-->
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- Стили -->
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/secMain.css">
+        <link rel="stylesheet" href="css/secEge.css">
+        <link rel="stylesheet" href="css/secCourses.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <!-- Шрифты -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <title>Калькулятор ЕГЭ</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="s__header">
+                <div class="container">
+                    <div id="logoSurgu">
+                        <img src="images/logoSurgu.svg">
+                        <div id="text-header-one">Бюджетное учреждение высшего образования Ханты-Мансийского автономного оркуга - Югры</div>
+                        <div id="text-header-two"> Сургутский Государственный университет</div>
+                    </div>
+
+                    <ul class="mediaBar">
+                        <a href="https://vk.com/surgu" target="_blank"><li id="vk"><img src="images/logoTopVk.svg"></li></a>
+                        <a href="https://www.facebook.com/surgu.university/" target="_blank"><li id="facebook"><img src="images/logoTopFacebook.svg"></li></a>
+                        <a href="https://www.youtube.com/user/SurgutUniversity" target="_blank"><li id="youtube"><img src="images/logoTopYoutube.svg"></li></a>
+                        <a href="https://instagram.com/surgu/" target="_blank"><li id="instagram"><img src="images/logoTopInstagram.svg"></li></a>
+                    </ul>
+                </div>
+            </header>
+            <section class="s__main">
+                <div class="main">
+                    <div class="main__bg">
+                        2022
+                    </div>
+                    <div class="main__container">
+                        <div class="main__logo">
+                            <div class="main__logo__text__top">
+                                Если учиться в Югре, то в
+                            </div>
+                            <div class="main__logo__text__main">
+                                СурГУ
+                            </div>
+                            <div class="main__logo__text__bottom">
+                                успей подать документы!
+                            </div>
+                        </div>
+                        <div class="main__buttons">
+                            <button class="btn" 
+                                    onClick="document.querySelector('.s__courses').scrollIntoView({behavior: 'smooth'});">
+                                Смотреть направления
+                            </button>
+                            <a class="btn secondary" href="https://apply.surgu.ru/user/sign-in/login">Подать документы</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="s__ege">
+                <div class="ege__container">
+                    <div class="ege__text">
+                        <h1>Калькулятор ЕГЭ</h1>
+                        <p>Выберите 3 экзамена, а также введите свои баллы за Единый государственный экзамен 
+                            и мы подберем подходящие вам напрвления подготовки.</p>
+                    </div>
+                    <div class="ege__filters">
+                        <div class="ege__filter activated" id="fmath">Математика</div>
+                        <div class="ege__filter" id="fit">Информатика</div>
+                        <div class="ege__filter activated" id="frus">Русский язык</div>
+                        <div class="ege__filter" id="finyaz">Иностранный язык</div>
+                        <div class="ege__filter" id="fhistory">История</div>
+                        <div class="ege__filter" id="fobshestvo">Обществознание</div>
+                        <div class="ege__filter" id="fphys">Физика</div>
+                        <div class="ege__filter" id="fgeo">География</div>
+                        <div class="ege__filter" id="fbio">Биология</div>
+                        <div class="ege__filter" id="fchem">Химия</div>
+                    </div>
+                    <div class="ege__input">
+                        <input id="ege__input" type="number" value="0" min="0" max="300"
+                               onkeyup="ege__input__js();"
+                               onclick="ege__input__js();"
+                        >
+                        <button class="btn ege" id="ege__btn">Смотреть направления</button>
+                    </div>
+                </div>
+            </section>
+            <section class="s__courses">
+                <div class="courses__container">
+                    <div class="courses__panel">
+                        <div class="institute activated" id="iall">Все</div>
+                        <div class="institute" id="imedcol">Медицинский колледж</div>
+                        <div class="institute pi" id="ipi">Политехнический институт</div>
+                        <div class="institute pravo" id="ipravo">Институт государства и права</div>
+                        <div class="institute gum" id="igum">Институт гуманитарного образования и спорта</div>
+                        <div class="institute est" id="iest">Институт естественных и технических наук</div>
+                        <div class="institute med" id="imed">Медицинский институт</div>
+                        <div class="institute econom" id="ieconom">Институт экономики и управления</div>
+                    </div>
+                    <div class="courses__main">
+                        <div class="side__menu__container">
+                            <div class="side__menu__directions" id="courses_list">
+                                <div class="direction" id="dsofteng">Программная инженерия</div>
+                                <div class="direction activated" id="dappmath">Прикладная математика</div>
+                                <div class="direction" id="dISIT">ИСИТ</div>
+                                <div class="direction" id="dphysics">Физика</div>
+                                <div class="direction" id="dpersonmanag">Управление персаналом</div>
+                            </div>
+                        </div>
+
+                        <div class="visit__card__container">
+                            <div class="visit__card__direction" >
+                                <div class="card">
+                                    <h1 id="card_header">Прикладная математика</h1>
+                                    <div class="description__direction">
+                                        <p id="card_description">
+                                            Хочешь стать инженером и покорить целый мир?
+                                            Разрабатывать и применять математические методы,
+                                            информационные технологии, программные обеспечения
+                                            для решения задач моделирования, анализа, оптимизации,
+                                            прогнозирования в научной и производственной деятельности.
+                                        </p>
+                                        <img class="direction__photo" src="images/cardMath.jpg" alt="фоточка">
+                                    </div>
+                                    <div class="info__direction">
+                                        <div class="text__info__direction">
+                                            <h1>Средний балл при зачеслении на бюджет</h1>
+                                            <h2 id="card_points">70,63</h2>
+                                            <div id="card_subjects">
+                                                <p>Русский язык</p>
+                                                <p>Математика (профильная)</p>
+                                                <p>Информатика и ИКТ или Физика</p>
+                                            </div>
+                                        </div>
+                                        <div class="text__info__direction">
+                                            <h1>Количество мест</h1>
+                                            <h2 id="card_place">20/5</h2>
+                                            <p id="card_money_type">Бюджет / Комерция</p>
+                                        </div>
+                                        <div class="text__info__direction">
+                                            <h1>Срок обучения</h1>
+                                            <h2 id="card_period">4 года</h2>
+                                            <p id="card_cost">
+                                                стоимость: 163 220 рублей в год
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="main__buttons">
+                                        <a class="btn" href="https://apply.surgu.ru/user/sign-in/login">Подать документы</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+            <footer>
+                <div class="footer">
+                    <ul class="mediaBottomBar">
+                        <li><a href="https://vk.com/surgu" target="_blank">
+                            <img class="mediaIco" src="images/logoBottomVk.svg" >
+                        </a></li>
+                        <li><a href="https://www.facebook.com/surgu.university/" target="_blank">
+                            <img class="mediaIco" src="images/logoBottomFacebook.svg">
+                        </a></li>
+                        <li><a href="https://www.youtube.com/user/SurgutUniversity" target="_blank">
+                            <img class="mediaIco" src="images/logoBottomYoutube.svg">
+                        </a></li>
+                        <li><a href="https://instagram.com/surgu/" target="_blank">
+                            <img class="mediaIco" src="images/logoBottomInstagram.svg">
+                        </a></li>
+                    </ul>
+                    <div class="text-bottom-one">
+                        <p>© Все права защищены. Сургутский государственный университет, 2022</p>
+                        <p>Сайт разработан и поддерживается командой "Много Дел"</p>
+                        <p>Техподдержка: vadim.kadyrin@mail.ru</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+            <!-- JS -->
+            <script src="js/courses.js" type="text/javascript" ></script>
+            <script src="js/ege.js" type="text/javascript" ></script>
+    </body>
+</html>
