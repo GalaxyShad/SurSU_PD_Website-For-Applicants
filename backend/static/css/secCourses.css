@@ -1,0 +1,381 @@
+/* Основной контент */
+
+.courses__container {
+    height: auto;
+    margin-bottom: 256px;
+}
+
+/* ---- Вкладки ---- */
+.courses__panel {
+    display: flex;
+    flex-flow: row wrap; 
+    justify-content: center;
+    align-items: center;
+    row-gap: 8px;
+
+    padding: 32px 100px;
+    background-color: #E5E5E5;
+    border-bottom: 2px solid #A6A6A6;
+}
+
+.institute {
+    display: flex; 
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+
+    width: 210px;
+
+    font-weight: 500;
+    font-size: 18px;
+    
+    color: #44ABFF; 
+    filter: brightness(0) opacity(50%);
+    border-color: transparent;
+
+    padding-bottom: 16px;
+
+    height: 100px;
+
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    user-select: none;
+}
+
+.institute:hover {
+    filter: none;
+    cursor: pointer;
+    border-bottom: 4px solid ;
+}
+
+.institute.activated {
+    filter: none;
+    border-bottom: 4px solid ;
+} 
+
+
+.pi {
+    color: rgb(230, 60, 36);
+    border-color: rgb(230, 60, 36);
+}
+
+.med {
+    color: rgb(8, 150, 67);
+    border-color: rgb(8, 150, 67);
+}
+
+.econom {
+    color: rgb(141, 113, 0);
+    border-color: rgb(141, 113, 0);
+}
+
+.est {
+    color: rgb(237, 115, 29);
+    border-color: rgb(237, 115, 29);
+}
+
+.gum {
+    color: rgb(86, 64, 112);
+    border-color: rgb(86, 64, 112);
+}
+
+.pravo {
+    color: rgb(0, 115, 187);
+    border-color: rgb(0, 115, 187);
+}
+
+
+.courses__main {
+    display: flex;
+    justify-content: center;
+
+    margin: 32px 100px;
+}
+
+
+/* ---- Меню ---- */
+.side__menu__container{
+    /* display: none; */
+
+    height: min-content;
+    width: 60%;
+    min-width: 250px;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #FFFFFF;
+    box-shadow: 0 4px 56px rgba(0, 0, 0, 0.05);
+    border-radius: 37px;
+}
+
+.side__menu__directions{  
+    display: flex;
+    flex-flow: column;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.direction{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    color: #004B89;
+
+    padding: 14px 40px;
+}
+
+.direction:hover{
+    color: #44ABFF;
+    cursor: pointer;
+}
+
+.direction.activated{
+    color: #FFFFFF;
+    background: #44ABFF;
+}
+
+
+/* ---- Карточки ---- */
+.visit__card__container{
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    background: #FFF;
+    box-shadow: 0 4px 56px rgba(0, 0, 0, 0.05);
+    border-radius: 37px;
+
+    padding: 32px 64px;
+    margin-left: 2%;
+
+}
+
+.card > h1{
+    font-size: 48px;
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+.description__direction{
+    display: flex;
+    flex-direction: row;
+
+    padding-bottom: 32px;
+    border-bottom: 2px solid #b3b3b3;
+}
+
+
+.description__direction > p{
+    font-size: 20px;
+    font-weight: 400;
+    padding-right: 64px;
+    line-height: 31px;
+    width: 60%;
+}
+
+
+.direction__photo {
+    width: 40%; 
+    height: auto;
+    border-radius: 8px; 
+    
+
+    object-fit: cover;
+    margin-left: auto;
+}
+
+
+.info__direction{
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 16px;
+}
+
+.text__info__direction{
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.text__info__direction > h1{
+    font-size: 20px;
+    padding: 10px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.text__info__direction > h2{
+    font-size: 54px;
+    margin: 32px 0px;
+    height: 100px;
+    line-height: 50px;
+}
+.text__info__direction > p{
+    padding: 8px 0px;
+ }
+
+ @media screen and (max-width: 1324px) {
+    .description__direction {
+        flex-direction: column;
+    }
+
+    .description__direction > p {
+        width: 100%;
+    }
+
+    .direction__photo {
+        margin-top: 24px;
+        width: 100%;
+        height: 300px;
+    }
+
+    .text__info__direction > h2 {
+        font-size: 42px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .courses__main {
+        margin: 32px 16px;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .courses__panel {
+        width: 100%;
+        overflow-x: scroll;
+
+        padding: 2% 40%;
+        
+        flex-direction: row;  
+        flex-flow: unset;
+        justify-content: left;
+
+        gap: 100%;
+    }
+
+    
+
+    .institute {
+        font-size: 5vw;
+    
+        height: auto;
+    }
+
+    /* Карточки */
+    .courses__main {
+        flex-direction: column;
+    
+        margin: 5% 2%;
+    }
+
+    .side__menu__container{
+        /* display: none; */
+    
+        height: min-content;
+        width: 100%;
+        min-width: unset;
+
+        margin-bottom: 5%;
+    
+        align-items: center;
+        justify-content: center;
+    }
+
+    .direction {
+        text-align: center;
+
+        font-size: 4vw;
+
+        padding: 6% 40px;
+    }
+
+    .visit__card__container{
+        align-items: center;
+        justify-content: center;
+    
+        background: #FFF;
+        box-shadow: 0 4px 56px rgba(0, 0, 0, 0.05);
+        border-radius: 37px;
+    
+        padding: 0% 5% 5% 5%;
+        margin: 0 1%; 
+    
+    }
+    
+    .card > h1{
+        font-size: 8vw;
+        margin-top: 4%;
+        margin-bottom: 4%;
+        text-align: center;
+    }
+    
+    
+    .description__direction > p{
+        font-size: 4vw;
+        font-weight: 400;
+        padding-right: 0;
+        line-height: 5vw;
+    }
+    
+    
+    .info__direction{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+    
+        margin-top: 16px;
+    }
+    
+    .text__info__direction{
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+    }
+    
+    .text__info__direction > h1{
+        font-size: 5vw;
+        padding: 10px;
+        height: auto;
+
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .text__info__direction > h2{
+        font-size: 12vw;
+        height: auto;
+        line-height: 50px;
+        margin: 5% 0;
+    }
+
+    .text__info__direction > p{
+        font-size: 4vw;
+        padding: 2px 0px;
+     }
+}

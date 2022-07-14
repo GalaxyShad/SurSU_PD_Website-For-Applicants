@@ -9,12 +9,12 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
         <!-- Стили -->
-        <link rel="stylesheet" href="static/css/main.css">
-        <link rel="stylesheet" href="static/css/header.css">
-        <link rel="stylesheet" href="static/css/secMain.css">
-        <link rel="stylesheet" href="static/css/secEge.css">
-        <link rel="stylesheet" href="static/css/secCourses.css">
-        <link rel="stylesheet" href="static/css/footer.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/secMain.css">
+        <link rel="stylesheet" href="css/secEge.css">
+        <link rel="stylesheet" href="css/secCourses.css">
+        <link rel="stylesheet" href="css/footer.css">
         <!-- Шрифты -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,17 +26,17 @@
         <div class="wrapper">
             <header class="s__header">
                 <div class="container">
-                    <div id="logoSurgu"> 
-                        <img src="static/images/logoSurgu.svg">
+                    <div id="logoSurgu">
+                        <img src="images/logoSurgu.svg">
                         <div id="text-header-one">Бюджетное учреждение высшего образования Ханты-Мансийского автономного оркуга - Югры</div>
                         <div id="text-header-two"> Сургутский Государственный университет</div>
                     </div>
 
                     <ul class="mediaBar">
-                        <a href="https://vk.com/surgu" target="_blank"><li id="vk"><img src="static/images/logoTopVk.svg"></li></a>
-                        <a href="https://www.facebook.com/surgu.university/" target="_blank"><li id="facebook"><img src="static/images/logoTopFacebook.svg"></li></a>
-                        <a href="https://www.youtube.com/user/SurgutUniversity" target="_blank"><li id="youtube"><img src="static/images/logoTopYoutube.svg"></li></a>
-                        <a href="https://instagram.com/surgu/" target="_blank"><li id="instagram"><img src="static/images/logoTopInstagram.svg"></li></a>
+                        <a href="https://vk.com/surgu" target="_blank"><li id="vk"><img src="images/logoTopVk.svg"></li></a>
+                        <a href="https://www.facebook.com/surgu.university/" target="_blank"><li id="facebook"><img src="images/logoTopFacebook.svg"></li></a>
+                        <a href="https://www.youtube.com/user/SurgutUniversity" target="_blank"><li id="youtube"><img src="images/logoTopYoutube.svg"></li></a>
+                        <a href="https://instagram.com/surgu/" target="_blank"><li id="instagram"><img src="images/logoTopInstagram.svg"></li></a>
                     </ul>
                 </div>
             </header>
@@ -75,20 +75,23 @@
                             и мы подберем подходящие вам напрвления подготовки.</p>
                     </div>
                     <div class="ege__filters">
-                        <div class="ege__filter" id="fmath">Математика</div>
-                        <div class="ege__filter activated" id="fit">Информатика</div>
-                        <div class="ege__filter" id="frus">Русский язык</div>
-                        <div class="ege__filter activated" id="finyaz">Иностранный язык</div>
+                        <div class="ege__filter activated" id="fmath">Математика</div>
+                        <div class="ege__filter" id="fit">Информатика</div>
+                        <div class="ege__filter activated" id="frus">Русский язык</div>
+                        <div class="ege__filter" id="finyaz">Иностранный язык</div>
                         <div class="ege__filter" id="fhistory">История</div>
-                        <div class="ege__filter activated" id="fobshestvo">Обществознание</div>
+                        <div class="ege__filter" id="fobshestvo">Обществознание</div>
                         <div class="ege__filter" id="fphys">Физика</div>
                         <div class="ege__filter" id="fgeo">География</div>
                         <div class="ege__filter" id="fbio">Биология</div>
                         <div class="ege__filter" id="fchem">Химия</div>
                     </div>
                     <div class="ege__input">
-                        <input id="ege__input" name="points" type="number" value="0" min="0" max="300">
-                        <button class="btn ege" id="ege__btn" method="post">Смотреть направления</button>
+                        <input id="ege__input" type="number" value="0" min="0" max="300"
+                               onkeyup="ege__input__js();"
+                               onclick="ege__input__js();"
+                        >
+                        <button class="btn ege" id="ege__btn">Смотреть направления</button>
                     </div>
                 </div>
             </section>
@@ -127,7 +130,7 @@
                                             для решения задач моделирования, анализа, оптимизации,
                                             прогнозирования в научной и производственной деятельности.
                                         </p>
-                                        <img class="direction__photo" src="static/images/cardMath.jpg" alt="фоточка">
+                                        <img class="direction__photo" src="images/cardMath.jpg" alt="фоточка">
                                     </div>
                                     <div class="info__direction">
                                         <div class="text__info__direction">
@@ -164,32 +167,32 @@
                 </div>
             </section>
             <footer>
-                <div class="basement">
+                <div class="footer">
                     <ul class="mediaBottomBar">
                         <li><a href="https://vk.com/surgu" target="_blank">
-                            <img class="mediaIco" src="static/images/logoBottomVk.svg" >
+                            <img class="mediaIco" src="images/logoBottomVk.svg" >
                         </a></li>
                         <li><a href="https://www.facebook.com/surgu.university/" target="_blank">
-                            <img class="mediaIco" src="static/images/logoBottomFacebook.svg">
+                            <img class="mediaIco" src="images/logoBottomFacebook.svg">
                         </a></li>
                         <li><a href="https://www.youtube.com/user/SurgutUniversity" target="_blank">
-                            <img class="mediaIco" src="static/images/logoBottomYoutube.svg">
+                            <img class="mediaIco" src="images/logoBottomYoutube.svg">
                         </a></li>
                         <li><a href="https://instagram.com/surgu/" target="_blank">
-                            <img class="mediaIco" src="static/images/logoBottomInstagram.svg">
+                            <img class="mediaIco" src="images/logoBottomInstagram.svg">
                         </a></li>
                     </ul>
                     <div class="text-bottom-one">
-                        <p>© Все права защищены. Сургутский государственный университет, 2021</p>
+                        <p>© Все права защищены. Сургутский государственный университет, 2022</p>
                         <p>Сайт разработан и поддерживается командой "Много Дел"</p>
                         <p>Техподдержка: vadim.kadyrin@mail.ru</p>
                     </div>
                 </div>
             </footer>
-
-            
         </div>
-        <!-- JS -->
-        <script src="static/js/courses.js" type="text/javascript" ></script>
+
+            <!-- JS -->
+            <script src="js/courses.js" type="text/javascript" ></script>
+            <script src="js/ege.js" type="text/javascript" ></script>
     </body>
 </html>
